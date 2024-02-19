@@ -1,27 +1,13 @@
+@font-face {
+	font-family: 'SF-Pro';
+	src: url('/fonts/SF-Pro.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     scrollbar-width: thin;
-}
-
-@font-face {
-	font-family: 'Tiltortion';
-	src: url('/fonts/Tiltortion.otf');
-}
-@font-face {
-	font-family: 'FUNGIS Regular';
-	src: url('/fonts/FUNGIS Regular.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'UncutSans-Regular';
-	src: url('/fonts/UncutSans-Regular.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'NeueKonstantGrotesk-Book';
-	src: url('/fonts/NeueKonstantGrotesk-Book.otf');
-}
-@font-face {
-	font-family: 'Switzer-Regular';
-	src: url('/fonts/Switzer-Regular.woff2');
 }
 
 :root {
@@ -30,7 +16,7 @@
 	--primary: #3d5035;
 
     --font-headings: "UncutSans-Bold", Roboto, sans-serif;
-    --font-body: "UncutSans-Regular", sans-serif;
+    --font-body: "SF-Pro", sans-serif;
 	--font-display: "NeueKonstantGrotesk-Book", sans-serif;
 	--font-quirk: "Tiltortion", serif;
 }
@@ -57,7 +43,7 @@ body {
 }
 
 .background-static {
-	background-image: url('../../public/noise.gif');
+	background-image: url('../public/noise.gif');
 	opacity: calc(8/100);
 	
 	position: fixed;
@@ -71,29 +57,10 @@ body {
 	pointer-events: none;
 }
 
-.main-content-wrapper {
-	display: flex;
-	flex-direction: row;
-	column-gap: 1em;
-}
-
-.main-section {
-	height: 80vh;
-	border: 2px solid var(--primary);
-
-	flex-grow: 1;
+h1 {
+	font-size: 2em;
 }
 
 a {
 	color: var(--primary);
-}
-
-.section-title {
-	display: flex;
-	flex-direction: row;
-	align-items: end;
-}
-
-.section-title h1, p{
-	margin:0;
 }
