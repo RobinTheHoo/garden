@@ -1,6 +1,5 @@
 .c-breadcrumbs {
     --color-link-breadcrumbs: inherit;
-    --size-font-breadcrumbs: 1rem;
     --spacing-vertical-separator-breadcrumbs: 6px;
   }
   .c-breadcrumbs .has-ellipsis {
@@ -32,6 +31,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .c-breadcrumbs__crumb:last-of-type {
+    background-color: var(--primary);
+    color: var(--base);
+  }
   .c-breadcrumbs__crumbs:where(.has-no-separators) {
     row-gap: var(--spacing-vertical-separator-breadcrumbs);
     column-gap: 1rem;
@@ -56,4 +59,7 @@
     color: var(--color-link-breadcrumbs);
     line-height: 1;
   }
-  
+  .c-breadcrumbs__crumb{
+    font-size: 1em;
+    padding: .5em;
+  }

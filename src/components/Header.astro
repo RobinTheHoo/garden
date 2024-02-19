@@ -11,13 +11,18 @@ import '../styles/breadcrumbs.css';
         width="64"
         loading="eager"
     />
-    <Breadcrumbs />
+    <Breadcrumbs>
+        <span slot="separator" font-size='1.5em'>
+            /
+        </span>
+    </Breadcrumbs>
 </header>
 
 <style>
     header {
         display: flex;
         flex-direction: row;
+        column-gap: 1em;
 
         align-items: center;
 
