@@ -1,11 +1,22 @@
 ---
 import BaseHead from '../components/Sidebar.astro';
 import Sidebar from '../components/Sidebar.astro';
+import Footer from '../components/Footer.astro';
 ---
 <html>
     <BaseHead />
     <body>
+
         <Sidebar />
-        <MainSection />
+        <slot />
+        <Footer />
     </body>
 </html>
+
+<style>
+    body {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+</style>
