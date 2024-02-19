@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+}
+
+@font-face {
+	font-family: 'Tiltortion';
+	src: url('/fonts/Tiltortion.otf');
+}
+@font-face {
+	font-family: 'FUNGIS Regular';
+	src: url('/fonts/FUNGIS Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'UncutSans-Regular';
+	src: url('/fonts/UncutSans-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'NeueKonstantGrotesk-Book';
+	src: url('/fonts/NeueKonstantGrotesk-Book.otf');
+}
+@font-face {
+	font-family: 'Switzer-Regular';
+	src: url('/fonts/Switzer-Regular.woff2');
+}
+
+:root {
+	--base: #191724;
+	--surface: #26233a;
+	--overlay: #26233a;
+	--muted: #6e6a86;
+	--subtle: #908caa;
+	--text: #e0def4;
+	--love: #eb6f92;
+	--gold: #f6c177;
+	--rose: #ebbcba;
+	--pine: #31748f;
+	--foam: #9ccfd8;
+	--iris: #c4a7e7;
+
+    --font-headings: "UncutSans-Bold", Roboto, sans-serif;
+    --font-body: "UncutSans-Regular", sans-serif;
+	--font-display: "NeueKonstantGrotesk-Book", sans-serif;
+	--font-quirk: "Tiltortion", serif;
+}
+
+html {
+    font: 16px/28px var(--font-body);
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--base);
+}
+
+:root {
+	--base: #f2f4f1;
+	--text: #090b08;
+	--primary: #3d5035;
+
+    --font-headings: "UncutSans-Bold", Roboto, sans-serif;
+    --font-body: "UncutSans-Regular", sans-serif;
+	--font-display: "NeueKonstantGrotesk-Book", sans-serif;
+	--font-quirk: "Tiltortion", serif;
+}
+
+body {
+    margin: 1em 1em;
+	padding: 1em 1em;
+
+	height: 100vh;
+
+	border: 1px solid var(--subtle);
+
+    grid-template-columns: 1fr 4fr;
+}
