@@ -1,5 +1,6 @@
 ---
 import {Image} from 'astro:assets';
+import {Breadcrumb} from "astro-breadcumbs";
 import gremlin from '../../public/gremlin.png';
 ---
 <header>
@@ -7,6 +8,7 @@ import gremlin from '../../public/gremlin.png';
         src={gremlin}
         alt="site logo"
         width="64"
+        loading="eager"
     />
     <slot />
 </header>
@@ -18,6 +20,5 @@ import gremlin from '../../public/gremlin.png';
         justify-content: center;
 
         grid-row: 1;
-        grid-column: 1/3;
     }
 </style>

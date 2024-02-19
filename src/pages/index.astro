@@ -14,15 +14,19 @@ const { section, description } = Astro.props;
 <html>
 	<BaseHead />
 	<Header></Header>
-	<Sidebar />
-	<section class="main-section">
-		<div class="section-title">
-			<h1>.VED</h1>
-			<p>//me, also known as RobinTheHoo online</p>
-		</div>
-		<main>
-			
-		</main>
+	<section class="main-content-wrapper">
+		<Sidebar />
+		<section class="main-section">
+			<div class="section-title">
+				<h1>.VED</h1>
+				<p>//me, also known as RobinTheHoo online</p>
+			</div>
+			<main>
+				
+			</main>
+		</section>
 	</section>
+	
 	<Footer />
+	<div class="background-static"></div>
 </html>
