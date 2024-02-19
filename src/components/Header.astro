@@ -1,7 +1,8 @@
 ---
 import {Image} from 'astro:assets';
-import {Breadcrumb} from "astro-breadcumbs";
+import {Breadcrumbs} from 'astro-breadcrumbs';
 import gremlin from '../../public/gremlin.png';
+import '../styles/breadcrumbs.css';
 ---
 <header>
     <Image
@@ -10,14 +11,15 @@ import gremlin from '../../public/gremlin.png';
         width="64"
         loading="eager"
     />
-    <slot />
+    <Breadcrumbs />
 </header>
 
 <style>
     header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+
+        align-items: center;
 
         grid-row: 1;
     }

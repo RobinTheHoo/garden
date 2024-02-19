@@ -1,22 +1,22 @@
 ---
-import BaseHead from '../components/Sidebar.astro';
 import Sidebar from '../components/Sidebar.astro';
-import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+    section: string;
+    description: string;
+}
+
+const {section, description} = Astro.props;
 ---
-<html>
-    <BaseHead />
-    <body>
-
-        <Sidebar />
-        <slot />
-        <Footer />
-    </body>
-</html>
-
-<style>
-    body {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto;
-    }
-</style>
+<section class="main-content-wrapper">
+    <slot />
+    <section class="main-section">
+        <div class="section-title">
+            <h1>{section}</h1>
+            <p>{description}</p>
+        </div>
+        <main>
+        </main>
+    </section>
+</section>
