@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../Blog"
+		},
+		{
+			"path": "../svelte-experiment"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
