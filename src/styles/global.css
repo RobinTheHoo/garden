@@ -5,14 +5,19 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'UncutSans-Bold';
+	src: url('/fonts/UncutSans-Bold.woff') format('woff');
+}
+
 * {
     box-sizing: border-box;
     scrollbar-width: thin;
 }
 
 :root {
-	--base: #f2f4f1;
-	--text: #090b08;
+	--base: #fff2c9;
+	/* --text: #090b08; */
 	--primary: #3d5035;
 
     --font-headings: "UncutSans-Bold", Roboto, sans-serif;
@@ -25,7 +30,7 @@ html {
     font: 16px/28px var(--font-body);
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    color: var(--text);
+    color: var(--primary);
     background-color: var(--base);
 }
 
@@ -43,7 +48,7 @@ body {
 }
 
 .background-static {
-	background-image: url('../public/noise.gif');
+	background-image: url('../noise.gif');
 	opacity: calc(8/100);
 	
 	position: fixed;
@@ -61,6 +66,19 @@ h1 {
 	font-size: 2em;
 }
 
+h2 {
+	/* font: 24px/36px var(--font-headings);
+	letter-spacing: .07rem; */
+	padding: 0;
+	margin: .3em 0;
+	font-size: 1.5em;
+}
+
 a {
 	color: var(--primary);
+}
+
+p {
+	padding: 0;
+	margin: 0;
 }

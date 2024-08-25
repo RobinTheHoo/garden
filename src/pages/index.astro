@@ -5,12 +5,14 @@ import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BasicLayout from '../layouts/BasicLayout.astro';
+import HomeMain from '../components/HomeMain.astro';
 ---
 <html>
 	<BaseHead />
 	<Header />
-	<BasicLayout section='.VED' description='//me, also known as RobinTheHoo online'>
-		<Sidebar />
+	<BasicLayout section='HOME' description=':: about me, also known as RobinTheHoo online'>
+		<Sidebar slot='sidebar' />
+		<HomeMain slot='main' />
 	</BasicLayout>
 	<Footer />
 	<div class="background-static"></div>

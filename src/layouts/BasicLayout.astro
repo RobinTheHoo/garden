@@ -9,13 +9,14 @@ interface Props {
 const {section, description} = Astro.props;
 ---
 <section class="main-content-wrapper">
-    <slot />
+    <slot name="sidebar"/>
     <section class="main-section">
         <div class="section-title">
             <h1>{section}</h1>
             <p>{description}</p>
         </div>
         <main>
+            <slot name="main"/>
         </main>
     </section>
 </section>
@@ -55,7 +56,8 @@ const {section, description} = Astro.props;
         line-height: 1;
     }
 
-    main {
+    .main-section {
         overflow-y: scroll;
     }
+
 </style>
