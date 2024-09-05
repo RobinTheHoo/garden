@@ -4,6 +4,7 @@ import '../styles/global.css';
 interface Props {
     section: string;
     description: string;
+    color: string;
 }
 
 const {section, description} = Astro.props;
@@ -11,7 +12,7 @@ const {section, description} = Astro.props;
 <section class="main-content-wrapper">
     <slot name="sidebar"/>
     <section class="main-section">
-        <div class="section-title">
+        <div class="section-title" style="background-color: {color};">
             <h1>{section}</h1>
             <p>{description}</p>
         </div>
@@ -23,16 +24,22 @@ const {section, description} = Astro.props;
 
 <style>
     .main-content-wrapper {
-        display: flex;
-        flex-direction: row;
-        column-gap: 1em;
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: auto;
+
+        height: 80vh;
     }
 
     .main-section {
-        height: 80vh;
-        border: 2px solid var(--primary);
+        margin: 0 2%;
+        
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 10fr;
+        row-gap: 1em;
 
-        flex-grow: 1;
+        /* overflow-y: scroll; */
     }
 
     .section-title {
@@ -42,9 +49,9 @@ const {section, description} = Astro.props;
         
         color: var(--primary);
 
-        border-bottom: 2px solid var(--primary);
+        border: 2px solid var(--primary);
 
-        padding: .5em;
+        padding: .5em .25em;
     }
 
     .section-title h1, p{
@@ -52,12 +59,7 @@ const {section, description} = Astro.props;
     }
 
     .section-title h1 {       
-        margin-right: 1em;
-        line-height: 1;
+        margin-right: .5em;
+        line-height: 0.8;
     }
-
-    .main-section {
-        overflow-y: scroll;
-    }
-
 </style>

@@ -1,16 +1,16 @@
 ---
 import {Image} from 'astro:assets';
 import {Breadcrumbs} from 'astro-breadcrumbs';
-import gremlin from '../../public/gremlin.png';
+import gremlin from '../../public/Header5.png';
 import '../styles/breadcrumbs.css';
 ---
 <header>
-    <Image
+    <!-- <Image
         src={gremlin}
         alt="site logo"
         width="64"
         loading="eager"
-    />
+    /> -->
     <Breadcrumbs>
         <span slot="separator" font-size='1.5em'>
             /
@@ -29,5 +29,7 @@ import '../styles/breadcrumbs.css';
         grid-row: 1;
 
         color: var(--primary);
+
+        padding: .5em 2%;
     }
 </style>

@@ -1,8 +1,8 @@
-import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'http://localhost:5173/',
-    integrations: [sitemap()],
+  site: "http://localhost:5173/",
+  integrations: [sitemap()],
 });
